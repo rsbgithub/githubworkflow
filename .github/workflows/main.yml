@@ -32,4 +32,4 @@ jobs:
       - name: Get Secret
         run: echo $secrets.username
       - name: Get Secret
-        run: echo ${ $secrets.username }
+        run: echo ${ secrets.username }
