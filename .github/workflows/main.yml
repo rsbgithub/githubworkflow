@@ -17,4 +17,4 @@ jobs:
       - name: Get the Repo
         run: echo "The Repo was ${{ steps.hello.outputs.repo }}"
       - name: Get para value
-        run: echo "The Repo was ${{ steps.hello.outputs.para1 }}"
+        run: echo "The Para value  ${{ steps.hello.outputs.para1 }}"
