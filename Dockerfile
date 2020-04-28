@@ -20,7 +20,7 @@ RUN echo  $first-secret
 
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
-ENTRYPOINT ["/java_entrypoint.sh"]
+ENTRYPOINT ["/java_entrypoint.sh", "echo $GITHUB_REF", "echo $first-secret " ]
 
 # java -jar /usr/local/runme/app.jar
 #ENTRYPOINT ["java","-jar","app.jar"]
