@@ -1,4 +1,13 @@
-on: [push]
+name: MyPipeline
+
+on:
+  push:
+    branches:
+      - master
+
+  GITHUB_REMOTE: https://${{ github.actor }}:${{ github.token }}@github.com/${{ github.repository }}
+  GIT_NAME: ${{ github.actor }}
+  GIT_EMAIL: ${{ github.actor }}@users.noreply.github.com
 
 jobs:
   hello_world_job:
@@ -18,3 +27,5 @@ jobs:
         run: echo "The Repo was ${{ steps.hello.outputs.repo }}"
       - name: Get para value
         run: echo "The Para value  ${{ steps.hello.outputs.para1 }}"
+      - name: Get github remote
+        run: echo $GITHUB_REMOTE

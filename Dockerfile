@@ -18,3 +18,6 @@ RUN echo "This is Dockerfile run!!"
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/java_entrypoint.sh"]
+
+# java -jar /usr/local/runme/app.jar
+#ENTRYPOINT ["java","-jar","app.jar"]
