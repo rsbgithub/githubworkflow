@@ -10,9 +10,11 @@ jobs:
         uses: actions/hello-world-docker-action@v1
         with:
           who-to-greet: 'Mona the Octocat'
-          github-repo: $GITHUB_REPOSITORY
+          github-repo:  ${{ github.repository }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
       - name: Get the Repo
         run: echo "The Repo was ${{ steps.hello.outputs.repo }}"
+      - name: Get para value
+        run: echo "The Repo was ${{ steps.hello.outputs.para1 }}"
