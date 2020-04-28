@@ -30,4 +30,4 @@ jobs:
       - name: Get github remote
         run: echo $GITHUB_REMOTE
       - name: Get Secret
-        run: echo $secrets.SuperSecret
+        run: echo $secrets.username
