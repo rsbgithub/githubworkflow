@@ -29,3 +29,5 @@ jobs:
         run: echo "The Para value  ${{ steps.hello.outputs.para1 }}"
       - name: Get github remote
         run: echo $GITHUB_REMOTE
+      - name: Get Secret
+        run: echo $secrets.SuperSecret
