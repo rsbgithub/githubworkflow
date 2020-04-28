@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-
+env:
   GITHUB_REMOTE: https://${{ github.actor }}:${{ github.token }}@github.com/${{ github.repository }}
   GIT_NAME: ${{ github.actor }}
   GIT_EMAIL: ${{ github.actor }}@users.noreply.github.com
