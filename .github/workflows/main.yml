@@ -31,5 +31,3 @@ jobs:
         run: echo $GITHUB_REMOTE
       - name: Get Secret
         run: echo $secrets.username
-      - name: Get Secret
-        run: echo ${ secrets.username }
