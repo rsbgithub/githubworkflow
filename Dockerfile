@@ -15,6 +15,9 @@ COPY  target/githubworkflow-1.0-SNAPSHOT.jar /home/githubworkflow-1.0-SNAPSHOT.j
 COPY java_entrypoint.sh /java_entrypoint.sh
 
 RUN echo "This is Dockerfile run!!"
+RUN echo  $first-secret
+
+
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/java_entrypoint.sh"]

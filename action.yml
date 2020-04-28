@@ -7,9 +7,13 @@ inputs:
     required: true
     default: 'World'
   github-repo:  # id of input
-      description: 'Git hub repp'
-      required: true
-      default: 'N/A'
+    description: 'Git hub repp'
+    required: true
+    default: 'N/A'
+  first-secret:  # id of input
+    description: 'Secret'
+    required: true
+    default: ''
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -21,3 +25,4 @@ runs:
   args:
     - ${{ inputs.who-to-greet }}
     - ${{ inputs.github-repo }}
+    - ${{ inputs.first-secret }}

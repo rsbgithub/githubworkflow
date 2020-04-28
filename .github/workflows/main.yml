@@ -20,6 +20,7 @@ jobs:
         with:
           who-to-greet: 'Mona the Octocat'
           github-repo:  ${{ github.repository }}
+          first-secret: ${{ secrets.username }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
@@ -29,5 +30,4 @@ jobs:
         run: echo "The Para value  ${{ steps.hello.outputs.para1 }}"
       - name: Get github remote
         run: echo $GITHUB_REMOTE
-      - name: Get Secret
-        run: echo $secrets.username
+     
