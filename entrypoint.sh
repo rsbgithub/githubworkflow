@@ -3,6 +3,7 @@
 echo "Hello $1"
 echo "Repo $2"
 echo "GITHUB_REPOSITORY --   $GITHUB_REPOSITORY"
+echo "Test_ARG --   $TestArg"
 echo "-----------------------------------------"
 
 time=$(date)
