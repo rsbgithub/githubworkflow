@@ -6,6 +6,10 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  github-repo:  # id of input
+      description: 'Git hub repp'
+      required: true
+      default: 'N/A'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -16,4 +20,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.who-to-greet }}
-    - ${{ GITHUB_REPOSITORY }}
+    - ${{ inputs.github-repo }}
